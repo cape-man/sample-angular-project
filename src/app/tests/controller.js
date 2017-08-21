@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  describe('PhantomJS_1_9_8_(Linux).controllersspec', function() {
+  describe('controller', function() {
     var vm;
 
     beforeEach(module('gulpDemo'));
@@ -9,8 +9,9 @@
       vm = _$controller_('MainController');
     }));
 
-    it('should test whether the MainController is defined or not', function() {
-      expect(vm).toBeDefined();
-    });
+    it('should test whether the MainController is defined or not',
+      function() {
+        expect(vm).toBeDefined();
+      });
   });
 })();

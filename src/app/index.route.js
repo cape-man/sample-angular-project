@@ -18,7 +18,7 @@
         templateUrl: 'app/modules/uigrid/uigrid.html',
         controller: 'UigridController',
         controllerAs: 'uigrid'
-      });;
+      });
 
     $urlRouterProvider.otherwise('/');
   }

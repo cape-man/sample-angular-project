@@ -1,4 +1,24 @@
-<section class="jumbotron suk">
-  <h1>{{main.pageDetails.welcomeMessage}}</h1>
-  <h3>{{main.images.predictedCatagory}} </h3>
-</section>
+<div>
+<div class="jumbotron suk">
+  <div class="logo-item">
+    <img class="logo" src="../assets/colorpicker.gif"/>
+  </div>
+  <div style="width=15rem;margin-top:1rem;margin-left:6rem;color:white;font-size:2rem;position:fixed">
+  <label ng-if="main.search">Hello {{main.search}}!</label>
+  <label ng-if="!main.search">Hello user!</label>
+</div>
+<button ng-click="main.setMessage('http://www.theuselessweb.com/')" type="button" class="btn btn-success first-child">Useless Website</button>
+  <button ng-click="main.setMessage('http://weirdorconfusing.com/')" type="button" class="btn btn-success">Weird or Confusing</button>
+  <button ng-click="main.setMessage('https://angularjs.org/')" type="button" class="btn btn-success">Angular</button>
+  <button ng-click="main.setMessage('http://heeeeeeeey.com/')" type="button" class="btn btn-success">Heeeeeeeey</button>
+  <button ng-click="main.setMessage('http://www.staggeringbeauty.com/')" type="button" class="btn btn-success">Staggering beauty</button>
+  <button ng-click="main.setMessage('http://www.fallingfalling.com/')" type="button" class="btn btn-success">Falling falling</button>
+  <input placeholder="Write your name here!" ng-model="main.search" class="btn"/>
+  <!-- <h1>{{main.pageDetails.welcomeMessage}}</h1> -->
+  <!-- <h3>{{main.images.predictedCatagory}} </h3> -->
+</div>
+<!-- <div class="main-message">
+  <label>{{main.message}}</label>
+</div> -->
+<iframe class="iframe-component" src="{{main.trustSrc(main.message)}}"></iframe>
+</div>

@@ -1,4 +1,4 @@
-(function () {
+(function() {
   'use strict';
 
   angular
@@ -6,16 +6,26 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($state, MainService) {
+  function MainController($state, MainService, $sce) {
     var vm = this;
     vm.mainSvc = MainService;
-    vm.getPageDetails = function () {
-      vm.mainSvc.getPageDetails().success(function (data) {
+    vm.message = "http://www.theuselessweb.com/";
+    vm.getPageDetails = function() {
+      vm.mainSvc.getPageDetails().success(function(data) {
         vm.pageDetails = data;
-      })
+      });
     };
 
-    vm.init = function () {
+    vm.setMessage = function(message) {
+      vm.message = "";
+      vm.message = message;
+    };
+
+    vm.trustSrc = function(src) {
+      return $sce.trustAsResourceUrl(src);
+    };
+
+    vm.init = function() {
       vm.getPageDetails();
     };
 
