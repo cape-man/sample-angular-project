@@ -78,7 +78,7 @@ module.exports = function(config) {
       useBrowserName: false
     },
 
-    reporters: ['progress', 'junit']
+    reporters: ['progress', 'junit','coverage']
   };
 
   // This is the default preprocessors configuration for a usage with Karma cli
