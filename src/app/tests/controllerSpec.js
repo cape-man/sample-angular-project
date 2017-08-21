@@ -11,7 +11,7 @@
 
     it('should test whether the MainController is defined or not',
       function() {
-        expect(vm).toBeUndefined();
+        expect(vm).toBeDefined();
       });
   });
 })();
