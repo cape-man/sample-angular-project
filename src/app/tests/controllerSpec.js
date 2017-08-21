@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  describe('controller', function() {
+  describe('controllerSpec', function() {
     var vm;
 
     beforeEach(module('gulpDemo'));
@@ -11,7 +11,7 @@
 
     it('should test whether the MainController is defined or not',
       function() {
-        expect(vm).toBeDefined();
+        expect(vm).toBeUndefined();
       });
   });
 })();

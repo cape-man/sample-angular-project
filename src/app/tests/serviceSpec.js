@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  describe('service', function() {
+  describe('serviceSpec', function() {
     beforeEach(module('gulpDemo'));
     var service;
     var getPageDetailsUrl;
