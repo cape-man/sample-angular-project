@@ -19,7 +19,11 @@ node {
          sh 'node -v'
          sh 'npm install'
          sh 'bower install'
-         sh 'gulp test'
+        
+           
+           stage('Test2'){
+            sh 'gulp test'
+           }
        }
 
        stage('Build'){
