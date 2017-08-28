@@ -21,7 +21,6 @@ node {
             
            
            
-           steps {
         parallel (
             "dependencyInstallation" : {
                 sh 'npm install'
@@ -31,7 +30,10 @@ node {
                 sh 'gulp test'
             }
         )
-    }
+
+               
+               
+               
        }
         
         
