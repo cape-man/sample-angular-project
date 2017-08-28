@@ -17,14 +17,24 @@ node {
          print "Environment will be : ${env.NODE_ENV}"
 
          sh 'node -v'
-         sh 'npm install'
-         sh 'bower install'
-        
+         
+            
            
-           stage('Test2'){
-            sh 'gulp test'
-           }
+           
+           steps {
+        parallel (
+            "dependencyInstallation" : {
+                sh 'npm install'
+         sh 'bower install'
+            },
+            "testingUnitTests" : {
+                sh 'gulp test'
+            }
+        )
+    }
        }
+        
+        
 
        stage('Build'){
 
