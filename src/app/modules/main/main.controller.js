@@ -9,7 +9,7 @@
   function MainController($state, MainService, $sce) {
     var vm = this;
     vm.mainSvc = MainService;
-    vm.message = "http://www.theuselessweb.com/";
+    vm.message = "http://www.koalastothemax.com/";
     vm.getPageDetails = function() {
       vm.mainSvc.getPageDetails().success(function(data) {
         vm.pageDetails = data;
